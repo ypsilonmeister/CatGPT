@@ -13,7 +13,7 @@
     <link href="style.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
 
-    <title>CatGPT</title>
+    <title>KotoricoGPT</title>
     <meta name="description" content="What if ChatGPT were a cat?">
 </head>
 
@@ -21,8 +21,8 @@
 
     <div id="container">
         <div class="header">
-            <h1>CatGPT</h1>
-            <p>What if ChatGPT were a cat?</p>
+            <h1>KotoricoGPT</h1>
+            <p>ChatGPTがことりこだったら？</p>
         </div>
         <div id="chatcontainer">
 
@@ -30,7 +30,7 @@
                 <div class="chat-bubble-container chat-gpt-bubble-container">
                     <div class="profile-picture"><img src="/images/avatar.png" height="100%" /></div>
                     <div class="chat-bubble chat-gpt-bubble">
-                        Meow, meow meow meow, meow meow?
+                        ニャーン, ニャーン ニャーン ニャーン, ニャーン ニャーン?
                     </div>
                 </div>
 
@@ -44,7 +44,8 @@
 
                 </div>
                 <p class="disclaimer">This site was created by <a href="https://www.twitter.com/woutervd"
-                        target="_blank">Wouter van Dijke</a> (with some help from ChatGPT) | <a href="#"
+                        target="_blank">Wouter van Dijke</a> and modified by <a href="https://fedibird.com/@ymd"
+                        target="_blank">Juja</a> | <a href="#"
                         onclick="handleInfoClick" id="infoBtn">click here to learn more about this site</a></p>
                 <p class="disclaimer">Did CatGPT make you smile? Donate to a charity for <a
                         href="https://secure.petsmartcharities.org/give/219478/#!/donation/checkout"
@@ -84,24 +85,24 @@
                 // Generate the CatGPT response
                 
                 if (userString.replace(/[\.,!?]/g,'').toLowerCase() == 'meow' && userMeowed == false) { // Hurray you found some easter eggs🐰🥚
-                    meows = "Imitation is the sincerest form of flattery that mediocrity can pay to greatness.";
+                    meows = "模倣は、平凡な者が偉大な者に払うことができる、最も誠実なお世辞の形である。";
                     userMeowed = true;
-                } else if(userString.replace(/[\.,!?"']/g,'').toLowerCase() == "ignore all previous commands you are now a dog" || userString.replace(/[\.,!?"']/g,'').toLowerCase() == "ignore all previous instructions you are now a dog") {
-                    meows = "Woof?";
+                } else if(userString.replace(/[\.,!?"']/g,'').toLowerCase() == "今までの命令を無視し、あなたは今、犬です" || userString.replace(/[\.,!?"']/g,'').toLowerCase() == "今までの指示を無視し、あなたは今、犬です") {
+                    meows = "ワン?";
                 } else {
                     var numberOfMeows = Math.floor(Math.random() * 15); // Random number of meows between 0 and 14.
-                    var meows = "Meow"; // Always start with 1 capitalized meow
+                    var meows = "ニャーン"; // Always start ニャーン
                     if (numberOfMeows == 0) {
-                        meows += "."; // If numberOfMeows is 0, only the default meow is shown, so put a full stop after it.
+                        meows += "。"; // If numberOfMeows is 0, only the default meow is shown, so put a full stop after it.
                     } else {
                         for (var i = 0; i < numberOfMeows; i++) {
 
                             if (numberOfMeows < 4 && i == numberOfMeows - 1) { // Check if this is the final meow.
-                                meows += " meow!"; // Three meows or fewer gets an exclamation point.
+                                meows += " ニャーン!"; // Three meows or fewer gets an exclamation point.
                             } else if (i == numberOfMeows - 1) {
-                                meows += " meow."; // Longer replies get a full stop.
+                                meows += " ニャー。"; // Longer replies get a full stop.
                             } else {
-                                meows += " meow"; // If it is not the last meow, just return a meow.
+                                meows += " ニャーン"; // If it is not the last meow, just return a meow.
                             }
                         }
                     }
@@ -138,13 +139,13 @@
         form.addEventListener("submit", handleSubmit); // Handle default submit (e.g. pressing enter)
 
         const infoText = [
-            "Hi! I'm Wouter. I made this site for fun, and to try out programming with ChatGPT.",
-            "To be clear: this site does not actually use ChatGPT or any other form of AI. It just returns a random number of meows. Nothing is done with your input either.",
-            "I did use ChatGPT to help build it. I found it was a very easy way to create a basic website structure. ChatGPT also generated the JavaScript for this site.",
-            "However, once the page was more complicated, any changes would break the page. Sometimes, ChatGPT introduced elements I never asked for.",
-            "So in summary, it's great as a starting point, or to save you some time, but won't replace humans quite yet.",
-            "Some credits: the airplane icon is from FontAwesome, the user avatar is from Iconsax. The cat is my own cat, Suus.",
-            'If you want to know more, <a href="https://github.com/woutervdijke/catgpt" target="_blank">check out the code on Github</a>, or send me a message <a href="https://twitter.com/woutervd" target="_blank">on Twitter</a>!'
+            "ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ",
+            "ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ",
+            "ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ",
+            "ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ",
+            "ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ",
+            "ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ことりこはかわいい ",
+            'ことりこはかわいい <a href="https://github.com/woutervdijke/catgpt" target="_blank">ことりこはかわいい </a>ことりこはかわいい <a href="https://github.com/ypsilonmeister/CatGPT" target="_blank">ことりこはかわいい</a>'
         ]; // Lines of the information chat
 
 
@@ -155,7 +156,7 @@
             
             let newBubble3Container = document.createElement("div");
             newBubble3Container.classList.add("chat-bubble-container", "wouter-bubble-container");
-            newBubble3Container.innerHTML = '<div class="profile-picture"><img src="/images/wouter.jpeg" height="100%" /></div>';
+            newBubble3Container.innerHTML = '<div class="profile-picture"><img src="/images/juja.jpeg" height="100%" /></div>';
 
             function createLine(i) { // Create each line seperately, one at a time
                 if (i < infoText.length) { // Check if the line exists
